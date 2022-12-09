@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.msg_app.login.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signOnFragment"
+            app:destination="@id/signOnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signOnFragment"
+        android:name="com.example.msg_app.login.SignOnFragment"
+        android:label="fragment_sign_on"
+        tools:layout="@layout/fragment_sign_on" >
+        <action
+            android:id="@+id/action_signOnFragment_to_enderecoFragment"
+            app:destination="@id/enderecoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enderecoFragment"
+        android:name="com.example.msg_app.login.EnderecoFragment"
+        android:label="fragment_endereco"
+        tools:layout="@layout/activity_endereco" />
+</navigation>
